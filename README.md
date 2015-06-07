@@ -7,3 +7,6 @@ so it does not have features such as historical tracking.
 
 If you do not have a LibDataBroker addon, then you can try using the slash
 command: `/goldcounter`
+
+Note that you have to log in to each character in order to get their current
+gold total.
