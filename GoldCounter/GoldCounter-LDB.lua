@@ -15,10 +15,8 @@ function ldb:OnTooltipShow()
   self:AddLine(format("%s %s", GoldCounter.name, GoldCounter.version))
   self:AddLine("------------------------------")
   for name,character in pairs(GoldCounter.db.factionrealm.character) do
-    self:AddLine(format("%s: %sg %ds %dc",
+    self:AddLine(format("%s: %sg",
       name,
-      GoldCounter:comma_value(round(character.copper / 100 / 100)),
-      (character.copper / 100) % 100,
-      character.copper % 100))
+      GoldCounter:comma_value(floor(character.copper / 100 / 100))))
   end
 end

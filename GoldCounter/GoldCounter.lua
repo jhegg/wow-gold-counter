@@ -24,14 +24,11 @@ function GoldCounter:comma_value(n) -- credit http://richard.warburton.it
 end
 
 function GoldCounter:GetTotalGoldForDisplay()
-  return GoldCounter:comma_value(round(GoldCounter.totalCopper / 100 / 100))
+  return GoldCounter:comma_value(floor(GoldCounter.totalCopper / 100 / 100))
 end
 
 function GoldCounter:PrintGoldCounter()
-  print(format("Total Gold: %sg %ds %dc",
-    GoldCounter:GetTotalGoldForDisplay(),
-    (GoldCounter.totalCopper / 100) % 100,
-    GoldCounter.totalCopper % 100))
+  print(format("Total Gold: %sg", GoldCounter:GetTotalGoldForDisplay()))
 end
 
 function GoldCounter:UpdateGoldTotal()
