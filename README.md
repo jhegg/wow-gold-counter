@@ -35,4 +35,6 @@ where I also had to mouseover to see it.
 
 ## Where can I download official releases of this addon?
 
+* [WoWInterface](http://www.wowinterface.com/downloads/info23603-GoldCounter.html)
+* [Curse](http://www.curse.com/addons/wow/goldcounter/)
 * [GitHub (development site)](https://github.com/jhegg/wow-gold-counter/)
