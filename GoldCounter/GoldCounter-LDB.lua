@@ -10,11 +10,26 @@ local ldb = libDataBroker:NewDataObject("GoldCounter", {
 
 GoldCounter.ldb = ldb
 
+-- Courtesy of http://www.lua.org/pil/19.3.html
+local function pairsByKeys (t, f)
+   local a = {}
+   for n in pairs(t) do table.insert(a, n) end
+   table.sort(a, f)
+   local i = 0      -- iterator variable
+   local iter = function ()   -- iterator function
+      i = i + 1
+      if a[i] == nil then return nil
+      else return a[i], t[a[i]]
+      end
+   end
+   return iter
+end
+
 function ldb:OnTooltipShow()
   GoldCounter:UpdateGoldTotal()
   self:AddLine(format("%s %s", GoldCounter.name, GoldCounter.version))
   self:AddLine("------------------------------")
-  for name,character in pairs(GoldCounter.db.factionrealm.character) do
+  for name,character in pairsByKeys(GoldCounter.db.factionrealm.character) do
     self:AddLine(format("%s: %sg",
       name,
       GoldCounter:comma_value(floor(character.copper / 100 / 100))))

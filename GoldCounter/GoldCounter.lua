@@ -37,7 +37,7 @@ function GoldCounter:UpdateGoldTotal()
     totalCopper = totalCopper + character.copper
   end
   GoldCounter.totalCopper = totalCopper
-  GoldCounter.ldb.text = GoldCounter:GetTotalGoldForDisplay()
+  GoldCounter.ldb.text = format("%sg", GoldCounter:GetTotalGoldForDisplay())
 end
 
 local function UpdateGoldForThisCharacter()

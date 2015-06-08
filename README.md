@@ -4,7 +4,7 @@ A World of Warcraft addon that counts up your gold across all of your
 characters that are on the same realm and faction. It requires a
 LibDataBroker addon to display the results, for example Bazooka, Titan Panel,
 etc. The addon is designed to be very simple, so it does not have features
-such as historical tracking.
+such as historical tracking, and it ignores silver and copper.
 
 If you do not have a LibDataBroker addon, then you can try using the slash
 command: `/goldcounter`
