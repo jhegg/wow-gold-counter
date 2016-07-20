@@ -1,8 +1,8 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: GoldCounter
 ## Notes: Counts up your gold across all your characters
 ## Author: Marihk
-## Version: v1.1
+## Version: v1.2
 ## OptionalDeps: LibDBIcon-1.0
 ## SavedVariables: GoldCounterDB
 
